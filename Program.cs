@@ -33,15 +33,7 @@ namespace practica28_04
         public static void Main(string[] args){
             Program program = new Program();
 
-        #region 1
-            // var resultado = from prod in program.productos 
-            //                 where prod.Stock > 0    
-            //                 select prod;
-            // resultado.ToList().ForEach(n => Console.WriteLine($"{n.Nombre} {n.Stock}"));
-
-       
-       #endregion
-     #region 2
+     #region Actividad Adivina
         // SelectMany ejemplo adicional
         Random rnd = new();
             var productosConEtiquetas = new List<(string Producto, List<string> Etiquetas)>
@@ -70,8 +62,6 @@ namespace practica28_04
             }else{
                 Console.WriteLine("F era: "+productoAleatorio.Producto);
             }
-            // foreach (var etiqueta in todasEtiquetas)
-            //     Console.WriteLine(etiqueta);
 
             #endregion
 

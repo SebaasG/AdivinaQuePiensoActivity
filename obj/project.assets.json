@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/camper/SebaasG/ProjectsNet/practica28-04/practica28-04.csproj",
+      "projectUniqueName": "/home/camper/SebaasG/ProjectsNet/AdivinaQuePiensoActivity/practica28-04.csproj",
       "projectName": "practica28-04",
-      "projectPath": "/home/camper/SebaasG/ProjectsNet/practica28-04/practica28-04.csproj",
+      "projectPath": "/home/camper/SebaasG/ProjectsNet/AdivinaQuePiensoActivity/practica28-04.csproj",
       "packagesPath": "/home/camper/.nuget/packages/",
-      "outputPath": "/home/camper/SebaasG/ProjectsNet/practica28-04/obj/",
+      "outputPath": "/home/camper/SebaasG/ProjectsNet/AdivinaQuePiensoActivity/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/camper/.nuget/NuGet/NuGet.Config"
