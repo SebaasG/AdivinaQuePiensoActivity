@@ -38,30 +38,36 @@ namespace practica28_04
         Random rnd = new();
             var productosConEtiquetas = new List<(string Producto, List<string> Etiquetas)>
             {
-                ("Laptop HP", new List<string> { "Electrónica", "Computadores", "Trabajo" }),
+                ("Laptop HP", new List<string> { "Electronica", "Computadores", "Trabajo" }),
                 ("Silla de Oficina", new List<string> { "Muebles", "Confort", "Oficina" }),
-                ("Cafetera Oster", new List<string> { "Cocina", "Electrodomésticos", "Café" })
+                ("Cafetera Oster", new List<string> { "Cocina", "Electrodomésticos", "Cafe" })
             };
 
             Console.WriteLine("\nTodas las etiquetas:");
-           int mindex = rnd.Next(productosConEtiquetas.Count);
-           var productoAleatorio = productosConEtiquetas[mindex];
+         int mindex = rnd.Next(productosConEtiquetas.Count);
+var productoAleatorio = productosConEtiquetas[mindex];
 
-            Console.WriteLine($"Producto aleatorio: {productoAleatorio.Producto}");
-            Console.WriteLine("\nTodas las etiquetas: ");
-            var todasEtiquetas = productosConEtiquetas.SelectMany(p => p.Etiquetas).Distinct().ToList();
-            foreach (var etiqueta in todasEtiquetas)
-            {
-                Console.WriteLine(etiqueta);
-            }
-            Console.WriteLine("Escriba una etiqueta: ");
-            string userOption = Console.ReadLine().ToUpper();
+string etiquetaOculta = productoAleatorio.Etiquetas[rnd.Next(productoAleatorio.Etiquetas.Count)];
 
-            if (userOption == productoAleatorio.Producto.ToUpper()){
-                Console.WriteLine("Acertaste");
-            }else{
-                Console.WriteLine("F era: "+productoAleatorio.Producto);
-            }
+Console.WriteLine($"Producto aleatorio: {productoAleatorio.Producto}");
+Console.WriteLine("\nTodas las etiquetas:");
+var todasEtiquetas = productosConEtiquetas.SelectMany(p => p.Etiquetas).Distinct().ToList();
+foreach (var etiqueta in todasEtiquetas)
+{
+    Console.WriteLine(etiqueta);
+}
+
+Console.WriteLine("\nAdivina la etiqueta oculta:");
+string userOption = Console.ReadLine().Trim().ToUpper();
+
+if (userOption == etiquetaOculta.ToUpper())
+{
+    Console.WriteLine("¡Acertaste!");
+}
+else
+{
+    Console.WriteLine($"Era: {etiquetaOculta}");
+}
 
             #endregion
 
